@@ -20,12 +20,12 @@ Text Notes 8125 7650 0    50   ~ 0
 $Comp
 L Device:C C?
 U 1 1 5F0CA004
-P 2125 2575
-F 0 "C?" V 1873 2575 50  0000 C CNN
-F 1 "C" V 1964 2575 50  0000 C CNN
-F 2 "" H 2163 2425 50  0001 C CNN
-F 3 "~" H 2125 2575 50  0001 C CNN
-	1    2125 2575
+P 1925 2575
+F 0 "C?" V 1673 2575 50  0000 C CNN
+F 1 "C" V 1764 2575 50  0000 C CNN
+F 2 "" H 1963 2425 50  0001 C CNN
+F 3 "~" H 1925 2575 50  0001 C CNN
+	1    1925 2575
 	0    1    1    0   
 $EndComp
 $Comp
@@ -94,9 +94,7 @@ Wire Wire Line
 Wire Wire Line
 	3225 2675 3100 2675
 Wire Wire Line
-	1650 2575 1975 2575
-Wire Wire Line
-	2275 2575 2500 2575
+	1450 2575 1775 2575
 $Comp
 L Device:R R?
 U 1 1 5F0CAB87
@@ -297,7 +295,7 @@ F 3 "~" H 1875 4650 50  0001 C CNN
 	1    1875 4650
 	1    0    0    1   
 $EndComp
-Text Label 1650 2575 0    50   ~ 0
+Text Label 1450 2575 0    50   ~ 0
 Input
 Text Label 8200 2425 2    50   ~ 0
 Output
@@ -718,4 +716,22 @@ $EndComp
 Wire Wire Line
 	7975 5925 7975 5850
 Connection ~ 7975 5850
+Wire Wire Line
+	2075 2575 2150 2575
+$Comp
+L power:GND #PWR?
+U 1 1 5F1692C1
+P 2150 2725
+F 0 "#PWR?" H 2150 2475 50  0001 C CNN
+F 1 "GND" H 2155 2552 50  0000 C CNN
+F 2 "" H 2150 2725 50  0001 C CNN
+F 3 "" H 2150 2725 50  0001 C CNN
+	1    2150 2725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2725 2150 2575
+Connection ~ 2150 2575
+Wire Wire Line
+	2150 2575 2500 2575
 $EndSCHEMATC
