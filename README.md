@@ -15,4 +15,4 @@ Version 0.X: Development
 
 ## Designs
 ![BD](https://github.com/Connor-Devitt/Bass_Distortion_Pedal/blob/master/Block_Diagrams/Block_Diagram.png)
-![SCH](https://github.com/Connor-Devitt/Bass_Distortion_Pedal/blob/master/Electrical/Distortion_Pedal_Schematic/Distortion_Pedal_Schematic.png)
+![SCH](https://github.com/Connor-Devitt/Bass_Distortion_Pedal/blob/master/Electrical/Distortion_Pedal_Schematic/Distortion_Pedal_Schematic.PNG)
