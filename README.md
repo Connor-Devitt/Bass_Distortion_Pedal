@@ -14,4 +14,4 @@ Distortion Pedal for a Electric Bass Guitar. Features split signal path to blend
 Version 0.X: Development
 
 ## Designs
-![BD](https://github.com/Connor-Devitt/60pc_Mechanical_Keyboard/blob/master/IMG_20180429_124716.jpg)
+![BD](https://github.com/Connor-Devitt/Bass_Distortion_Pedal/blob/master/Block_Diagrams/Block_Diagram.png)
