@@ -1,0 +1,220 @@
+
+**** 07/14/20 20:58:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-single_freq"  [ e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simul
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "single_freq.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Connor\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.5s 0 0.0001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DISTORTION_PEDAL_SIM
+E_U1         AMP_S1 0 VALUE {LIMIT(V(N00287,AMP_S1)*1E6,0V,9V)}
+V_V1         N00103 0  AC 1
++SIN 0 0.5 40 0 0 0
+C_C1         N00103 N00287  47u  TC=0,0 
+V_V2         N00411 0 9Vdc
+R_R1         N00426 N00411  100k TC=0,0 
+R_R2         0 N00426  100k TC=0,0 
+R_R3         N00287 VGND  10k TC=0,0 
+E_U2         AMP_S1_CLEAN 0 VALUE {LIMIT(V(VGND,N01161)*1E6,0V,9V)}
+R_R4         AMP_S1 N01161  10k TC=0,0 
+R_R5         N01161 AMP_S1_CLEAN  25k TC=0,0 
+R_R6         N01459 AMP_S1_DIST  50k TC=0,0 
+R_R7         AMP_S1 N01459  5k TC=0,0 
+E_U3         AMP_S1_DIST 0 VALUE {LIMIT(V(VGND,N01459)*1E6,0V,9V)}
+D_D7         AMP_S1_DIST N01459 D1N4004 
+D_D9         N01459 AMP_S1_DIST D1N4004 
+E_U4         N06766 0 VALUE {LIMIT(V(VGND,N06596)*1E6,0V,9V)}
+R_R9         N06596 N06766  25k TC=0,0 
+C_C2         N06766 OUT  47u  TC=0,0 
+R_R10         OUT 0  10k TC=0,0 
+R_R11         AMP_S1_CLEAN N06596  {r_pot} TC=0,0 
+R_R12         N06596 AMP_S1_DIST  50k-{r_pot} TC=0,0 
+E_U5         VGND 0 VALUE {LIMIT(V(N00426,VGND)*1E6,0V,9V)}
+.PARAM  r_pot=5k
+
+**** RESUMING single_freq.cir ****
+.END
+
+**** 07/14/20 20:58:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-single_freq"  [ e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simul
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4004         D1N4001         
+          IS   14.110000E-09   14.110000E-09 
+           N    1.984           1.984        
+         IKF   94.81           94.81         
+          BV  600              75            
+         IBV   10.000000E-06   10.000000E-06 
+          RS     .03389          .03389      
+          TT    5.700000E-06    5.700000E-06 
+         CJO   25.890000E-12   25.890000E-12 
+          VJ     .3245           .3245       
+           M     .44             .44         
+
+
+**** 07/14/20 20:58:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-single_freq"  [ e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simul
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    0.0000  ( VGND)    4.5000  (AMP_S1)    4.5000 (N00103)    0.0000     
+
+(N00287)    4.5000 (N00411)    9.0000 (N00426)    4.5000 (N01161)    4.5000     
+
+(N01459)    4.5000 (N06596)    4.5000 (N06766)    4.5000 (AMP_S1_DIST)    4.5000
+
+(AMP_S1_CLEAN)    4.5000              
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -4.500E-05
+
+    TOTAL POWER DISSIPATION   4.05E-04  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  .015.
+         Time step =  352.4E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(E_U3)                   =   -69.63uA  \   -68.91uA
+    I(E_U4)                   =  -796.56uA  \   790.35uA
+    I(V_V1)                   =         0A  \  -976.56uA
+
+  These devices failed to converge:
+    D_D9      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   -4.0767  ( VGND)    4.5000  (AMP_S1)    4.1970 (N00103)    -.2955     
+
+(N00287)    4.1970 (N00411)    9.0000 (N00426)    4.5000 (N01161)    4.5000     
+
+(N01459)    4.5000 (N06596)    4.5000 (N06766)     .5024 (AMP_S1_DIST)    4.9215
+
+(AMP_S1_CLEAN)    5.2574              
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 0.5
+**** Param: TMAX = 0.0001
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  .015.
+         Time step =  355.8E-21, minimum allowable step size =  1.000E-18
+
+  These supply currents failed to converge:
+
+    I(E_U3)                   =   -70.78uA  \   -68.97uA
+    I(E_U4)                   =   -3.726mA  \    1.096mA
+    I(V_V1)                   =         0A  \  -976.56uA
+
+  These devices failed to converge:
+    D_D9      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   -4.0767  ( VGND)    4.5000  (AMP_S1)    4.1970 (N00103)    -.2955     
+
+(N00287)    4.1970 (N00411)    9.0000 (N00426)    4.5000 (N01161)    4.5000     
+
+(N01459)    4.5000 (N06596)    4.5000 (N06766)     .5024 (AMP_S1_DIST)    4.9215
+
+(AMP_S1_CLEAN)    5.2574              
+
+
+**** Interrupt ****
