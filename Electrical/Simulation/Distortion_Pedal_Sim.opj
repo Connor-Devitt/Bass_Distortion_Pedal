@@ -20,12 +20,9 @@
          ".\distortion_pedal_sim-pspicefiles\schematic1\single_freq.sim"
         (DisplayName "SCHEMATIC1-single_freq")
         (Type "PSpice Profile")))
-    (Folder "Model Libraries"
-      (Sort User))
-    (Folder "Stimulus Files"
-      (Sort User))
-    (Folder "Include Files"
-      (Sort User)))
+    (Folder "Model Libraries")
+    (Folder "Stimulus Files")
+    (Folder "Include Files"))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (MPSSessionName "Connor")
   (PartMRUSelector
