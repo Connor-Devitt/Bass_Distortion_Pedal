@@ -14,15 +14,30 @@
       (Type "Report")))
   (Folder "PSpice Resources"
     (Folder "Simulation Profiles"
-      (ActiveProfile
-         ".\distortion_pedal_sim-pspicefiles\schematic1\single_freq.sim")
       (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
          ".\distortion_pedal_sim-pspicefiles\schematic1\single_freq.sim"
         (DisplayName "SCHEMATIC1-single_freq")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\distortion_pedal_sim-pspicefiles\schematic1\dist_sweep.sim"
+        (DisplayName "SCHEMATIC1-dist_sweep")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\distortion_pedal_sim-pspicefiles\schematic1\balance_sweep.sim"
+        (DisplayName "SCHEMATIC1-balance_sweep")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\distortion_pedal_sim-pspicefiles\schematic1\freq_sweep.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\distortion_pedal_sim-pspicefiles\schematic1\freq_sweep.sim"
+        (DisplayName "SCHEMATIC1-Freq_Sweep")
         (Type "PSpice Profile")))
-    (Folder "Model Libraries")
-    (Folder "Stimulus Files")
-    (Folder "Include Files"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (MPSSessionName "Connor")
   (PartMRUSelector
@@ -77,8 +92,15 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
+      (Path "Design Resources"
+         "e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simulation\distortion_pedal_sim.dsn")
+      (Path "Design Resources"
+         "e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simulation\distortion_pedal_sim.dsn"
+         "SCHEMATIC1")
       (Path "Outputs")
-      (Select "Design Resources"))
+      (Select "Design Resources"
+         "e:\user\connor\documents\ee projects\distortion_pedal\bass_distortion_pedal\electrical\simulation\distortion_pedal_sim.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -89,8 +111,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -31 52 1939 52 613")
-        (Scroll "-538 -9")
-        (Zoom "107")
+        (Scroll "637 105")
+        (Zoom "210")
         (Occurrence "/"))
       (Path
          "E:\USER\CONNOR\DOCUMENTS\EE PROJECTS\DISTORTION_PEDAL\BASS_DISTORTION_PEDAL\ELECTRICAL\SIMULATION\DISTORTION_PEDAL_SIM.DSN")
